@@ -1,0 +1,30 @@
+
+<div class="container">
+    <h2>Add New User</h2>
+
+    <form #addduserform="ngForm" (ngSubmit)="addProduct()">
+        <!-- {user | json} -->
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="number" class="form-control" required [(ngModel)]="product.id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" required [(ngModel)]="product.price" name="price">
+        </div>
+
+        <div class="form-group">
+            <label for="describtion">Description:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.desc" name="describtion">
+        </div>
+             
+        <button type="submit" class="btn btn-success" style="background-color: Purple; font-style: Bold;">Submit</button>&nbsp;&nbsp;
+        <button type="submit" class="btn    btn-primary" (click)="gotolist()">BACK</button>
+        </form>
+        </div>

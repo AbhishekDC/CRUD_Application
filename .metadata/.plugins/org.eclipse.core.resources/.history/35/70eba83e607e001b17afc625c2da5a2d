@@ -1,0 +1,52 @@
+package com.product.crud.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Product {
+	@Id
+	private Integer id;
+	private String name;
+	private String desc;
+	private Integer price;
+	
+	public Product() {
+		
+	}
+	
+	public Product(Integer id, String name, String desc, Integer price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.desc = desc;
+		this.price = price;
+	}
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	public Integer getPrice() {
+		return price;
+	}
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+}

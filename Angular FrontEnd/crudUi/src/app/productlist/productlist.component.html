@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Product List</h1>
+    <p>Use Actions to perform CRUD Operations</p>            
+    <table class="table table-striped" *ngIf=productList>
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.desc}}</td>
+          <td><button type="button" class="btn btn-primary">Edit</button> &nbsp; 
+            <button type="button" class="btn btn-info">View</button> &nbsp; 
+            <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddProduct()">Add new Product</button>
+    
+  </div>
